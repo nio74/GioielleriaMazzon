@@ -155,3 +155,13 @@ p {
   text-align: center;
   background-color: #E8F9FD;
 }
+
+/* ------------------------Page Contacts------------------------------ */
+
+.bg-image-contacts {
+  background-image: url(/images/firmbee-com-SpVHcbuKi6E-unsplash.jpeg);
+  position: relative;
+  opacity: 0.65;
+  background-position: center;
+  background-repeat: no-repeat;
+}
