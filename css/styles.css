@@ -104,13 +104,13 @@ p {
 
 /* section-images */
 
-.section-images .image{
+.section-images .image {
   min-height: 30rem;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.section-images .text{
+.section-images .text {
   padding: 3rem;
   text-align: center;
 }
@@ -158,10 +158,13 @@ p {
 
 /* ------------------------Page Contacts------------------------------ */
 
-.bg-image-contacts {
-  background-image: url(/images/firmbee-com-SpVHcbuKi6E-unsplash.jpeg);
-  position: relative;
-  opacity: 0.65;
-  background-position: center;
-  background-repeat: no-repeat;
+
+
+.hero-contacts {
+  
+  height: 600px;
+  display: flex; width: 100%; align-items: center;
+  background-image: url(/images/contacts_background.jpeg) ;
+  background-size: cover;
+
 }
