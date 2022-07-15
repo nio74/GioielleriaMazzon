@@ -162,9 +162,13 @@ p {
 
 .hero-contacts {
   
-  height: 600px;
-  display: flex; width: 100%; align-items: center;
-  background-image: url(/images/contacts_background.jpeg) ;
-  background-size: cover;
+  height: 100%;
+  display: flex; align-items: center;
+  background-image: url(../images/Contatti.jpg);
+  background-position: center;
+  background-size:contain;
 
 }
+
+
+
