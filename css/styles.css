@@ -166,7 +166,8 @@ p {
   display: flex; align-items: center;
   background-image: url(../images/Contatti.jpg);
   background-position: center;
-  background-size:contain;
+  background-size:100%;
+  background-repeat:no-repeat;
 
 }
 
