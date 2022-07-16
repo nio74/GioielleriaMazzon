@@ -161,15 +161,39 @@ p {
 
 
 .hero-contacts {
-  
+
   height: 100%;
-  display: flex; align-items: center;
+  align-items: center;
   background-image: url(../images/Contatti.jpg);
   background-position: center;
-  background-size:100%;
-  background-repeat:no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+
+}
+
+.form-contacts {
+
+  padding-top: 8%;
+}
+
+.wrapper {
+  background-color: rgb(218, 212, 212);
+  opacity: 0.9;
+
 
 }
 
 
+#map {
+  width: 100%;
+}
 
+@media (max-width: 767.98px) {
+  #map {
+    height: 300px;
+  }
+  .wrapper{
+    margin-top: 10%;
+  }
+}
