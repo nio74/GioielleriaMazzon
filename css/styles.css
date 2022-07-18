@@ -64,7 +64,7 @@ p {
 }
 
 /* Navigation Bar */
-#navbar {
+.navbar {
   position: fixed;
   top: 0;
   padding: 1rem 1rem 3rem 1rem;
