@@ -1,17 +1,17 @@
-
+/* 
 var google;
 
 function init() {
     // Basic options for a simple Google Map
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     // var myLatlng = new google.maps.LatLng(40.71751, -73.990922);
-    var myLatlng = new google.maps.LatLng(40.69847032728747, -73.9514422416687);
+    var myLatlng = new google.maps.LatLng(45.58574940335062, 11.85956371822962);
     // 39.399872
     // -8.224454
     
     var mapOptions = {
         // How zoomed in you want the map to start at (always required)
-        zoom: 7,
+        zoom: 8,
 
         // The latitude and longitude to center the map (always required)
         center: myLatlng,
@@ -59,4 +59,56 @@ function init() {
     }
     
 }
-google.maps.event.addDomListener(window, 'load', init);
+google.maps.event.addDomListener(window, 'load', init); */
+
+function initMap() {
+    const map = new google.maps.Map(document.getElementById("map"), {
+      center: {
+        lat: 45.58581697906467,
+        lng: 11.859606636438022
+      },
+      zoom: 15,
+    });
+    const request = {
+      placeId: "ChIJN1t_tDeuEmsRUsoyG83frY4",
+      fields: ["name", "formatted_address", "place_id", "geometry"],
+    };
+    const infowindow = new google.maps.InfoWindow();
+    const service = new google.maps.places.PlacesService(map);
+  
+    service.getDetails(request, (place, status) => {
+      if (
+        status === google.maps.places.PlacesServiceStatus.OK &&
+        place &&
+        place.geometry &&
+        place.geometry.location
+      ) {
+        const marker = new google.maps.Marker({
+          map,
+          position: place.geometry.location,
+        });
+  
+        google.maps.event.addListener(marker, "click", () => {
+          const content = document.createElement("div");
+          const nameElement = document.createElement("h2");
+  
+          nameElement.textContent = place.name;
+          content.appendChild(nameElement);
+  
+          const placeIdElement = document.createElement("p");
+  
+          placeIdElement.textContent = place.place_id;
+          content.appendChild(placeIdElement);
+  
+          const placeAddressElement = document.createElement("p");
+  
+          placeAddressElement.textContent = place.formatted_address;
+          content.appendChild(placeAddressElement);
+          infowindow.setContent(content);
+          infowindow.open(map, marker);
+        });
+      }
+    });
+  }
+  
+  window.initMap = initMap;

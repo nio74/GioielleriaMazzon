@@ -64,9 +64,12 @@ p {
 }
 
 /* Navigation Bar */
-.navbar {
+#navbar {
+  position: fixed;
+  top: 0;
   padding: 1rem 1rem 3rem 1rem;
   z-index: 2;
+  transition: top 0.3s;
 }
 
 .navbar-brand {
@@ -85,10 +88,12 @@ p {
   color: white;
 }
 
-/* Donload Buttons */
-.download-button {
-  margin: 5% 3% 5% 0;
-}
+/* .nav--hidden {
+  transform: translateY(calc(-1 * var(--nav-height)));
+  box-shadow: none;
+} */
+
+
 
 /* Title image */
 .title-image {
@@ -193,7 +198,12 @@ p {
   #map {
     height: 300px;
   }
-  .wrapper{
-    margin-top: 10%;
+  .form-contacts {
+    padding-top: 30%;
+  }
+  .navbar-nav{
+    background-color: #a99d9f;
+    border-radius: 3%;
   }
 }
+ 
