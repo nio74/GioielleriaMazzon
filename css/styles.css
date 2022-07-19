@@ -67,6 +67,7 @@ p {
 /* Navigation Bar */
 .navbar {
   position: fixed;
+  background-color: #8d9d8876;
   top: 0;
   padding: 1rem 1rem 3rem 1rem;
   z-index: 2;
@@ -88,13 +89,13 @@ p {
   font-family: "Montserrat-light";
   color: white;
 }
-
-/* .nav--hidden {
-  transform: translateY(calc(-1 * var(--nav-height)));
-  box-shadow: none;
-} */
-
-
+.navbar-toggler-icon {
+  width: 5em;
+  height:5em;
+}
+.display-3 {
+  padding-top: 15%;
+}
 
 /* Title image */
 .title-image {
@@ -206,5 +207,6 @@ p {
     background-color: #a99d9f;
     border-radius: 3%;
   }
+  
 }
  
